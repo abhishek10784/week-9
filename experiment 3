@@ -1,0 +1,16 @@
+#include <stdio.h>
+long long fact(int n) {
+if (n == 0 || n == 1) return 1;
+return n * fact(n - 1);
+}
+long long nCr(int n, int r) {
+return fact(n) / (fact(r) * fact(n - r));
+}
+int main() {
+int n, r;
+printf("25331A05H2");
+printf("\nEnter n and r (n > r): ");
+scanf("%d %d", &n, &r);
+printf("nCr = %lld\n", nCr(n, r));
+return 0;
+}
